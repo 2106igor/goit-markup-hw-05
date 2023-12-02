@@ -579,7 +579,7 @@ body {
     background-color: transparent;
     font-size: 12px;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     outline: 0px solid transparent;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -606,7 +606,6 @@ body {
     line-height: 1.5;
     letter-spacing: 0.04em;
     border-radius: 4px;
-    gap: 16px;
     border: none;
     background-color: var(--IRIS, #4D5AE5);
     outline: 0px solid transparent;
@@ -615,6 +614,7 @@ body {
 }
 .subscribe-icon {
     fill: #FFFFFF;
+    margin-left: 16px;
 }
 .button-subscribe:hover,
 .button-subscribe:focus {
@@ -648,29 +648,37 @@ body {
     left:50%;
     transform: translate(-50%, -50%);
     background-color: #FCFCFC;
-
-
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .closed-button {
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-24px, 24px);
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
-    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: #E7E9FC;
     cursor: pointer;
     fill: #2E2F42;
     outline: 0px solid transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .closed-svg {
     fill: #2E2F42;
 }
-.closed-button:focus {
+.closed-button:focus,
+.closed-button:hover {
     background-color: #404BBF;
+    border: none;
 }
 .closed-svg:focus {
     fill: #FFF;
