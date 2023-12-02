@@ -555,13 +555,15 @@ body {
 .ellipse-icon-f {
     fill: #F4F4FD;
 }
+.subscribe {
+    margin-left: 80px;
+}
 .form-subscribe {
     display: flex;
 }
 .subscribe-footer-first {
     display: inline-flex;
     flex-direction: column;
-    margin-left: 80px;
     max-width: 100%;
 }
 .subscribe-title {
@@ -590,7 +592,7 @@ body {
     
 }
 .button-subscribe {
-    margin-top: 40px;
+    margin-top: auto;
     margin-bottom: auto;
     margin-left: 24px;
     display: inline-flex;
