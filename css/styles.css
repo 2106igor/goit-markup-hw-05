@@ -682,15 +682,8 @@ body {
 .closed-button:hover {
     background-color: #404BBF;
     border: none;
-}
-.closed-svg:focus {
     fill: #FFFFFF;
 }
-
-.closed-svg:hover {
-    fill: #FFFFFF;
-}
-
 .backdrop-p {
     width: 360px;
     margin-bottom: 16px;
@@ -721,7 +714,6 @@ body {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    border-color: #2E2F4266;
     border-radius: 4px;
     background-color: transparent;
     padding-left: 38px;
