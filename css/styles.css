@@ -710,8 +710,8 @@ body {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     margin-bottom: 4px;
 }
 .user-input {
@@ -722,6 +722,7 @@ body {
     border-radius: 4px;
     padding-left: 38px;
     outline: 0px solid transparent;
+    border-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user-input:focus {
@@ -734,6 +735,7 @@ body {
     left: 16px;
     transform: translateY(-50%);
     fill:#2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user-input:focus + .icon-user {
     fill:#4D5AE5;
@@ -743,16 +745,16 @@ body {
     color:rgba(46, 47, 66, 0.40);
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     width: 100%;
     height: 120px;
     resize: none;
     outline: 0px solid transparent;
     border: 1px solid rgba(46, 47, 66, 0.40);
     border-radius: 4px;
-    padding-top: 8px;
-    padding-left: 16px;
+    padding: 8px 16px;
+    background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textfield:focus {
@@ -776,25 +778,21 @@ body {
     border: 1px solid #2E2F4266;
     border-radius: 2px;
     margin-right: 8px;
-}
-.checkbox-false-icon {
-    fill: #fff;
-    opacity: 0;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-true:checked + .checkbox-false > .checkbox-false-span {
     background-color: #404BBF;
-}
-.checkbox-true:focus + .checkbox-false > .checkbox-false-span {
-    outline: #404BBF;
-}
-.checkbox-true:checked + .checkbox-false > .checkbox-false-span > .checkbox-false-icon {
-    opacity: 1;
+    border: none;
+    fill: #F4F4FD;
 }
 .checkbox-false {
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     color: #8E8F99;
 }
 .privacy-policy-link {
@@ -806,10 +804,8 @@ body {
     text-decoration-line: underline;
 }
 .button-modal {
-    display: inline-flex;
+    display: block;
     padding: 16px 32px;
-    align-items: flex-start;
-    justify-content: center;
     min-width: 169px;
     margin-left: 95px;
     font-size: 16px;
@@ -822,7 +818,7 @@ body {
     color: #FFF;
     background: #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    transition: background-color cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-modal:focus,
 .button-modal:hover {
