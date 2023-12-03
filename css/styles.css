@@ -631,7 +631,8 @@ body {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
     opacity: 1;
@@ -682,7 +683,8 @@ body {
     background-color: #404BBF;
     border: none;
 }
-.closed-svg:focus {
+.closed-svg:focus,
+.closed-svg:hover {
     fill: #FFFFFF;
 }
 
@@ -694,11 +696,13 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.021em;
+    letter-spacing: 0.02em;
+}
+.form-path {
+    margin-bottom: 8px;
 }
 .user-field {
     position: relative;
-    margin-bottom: 8px;
 }
 .label-name {
     display: block;
@@ -756,6 +760,9 @@ body {
 }
 .textfield::placeholder {
     color: rgba(46, 47, 66, 0.40);
+}
+.comment-area {
+    margin-bottom: 16px;#
 }
 .privacy-policy-box {
     margin-bottom: 24px;
